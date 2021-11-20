@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link id ="pagestyle" rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<head>
+    <script async src="https://arc.io/widget.min.js#fFNTMsJ9"></script>
+    <meta charset="UTF-8">
+    <title>Pillow | Games</title>
+</head>
+<body id="body">
+
+
+
+<script>
+    window.addEventListener('load', function() {
+      document.getElementById('file').onchange = function(e) {
+        var gameUrl = URL.createObjectURL(new Blob([e.target.files[0]]))
+        var extension = e.target.files[0].name.split('.').pop()
+        var gameName = e.target.files[0].name.replaceAll("'", "\\'")
+        var gameName = gameName.substr(0, gameName.length - extension.length - 1)
+        e.target.remove()
+        document.body.innerHTML = ''
+        if (['fds', 'nes', 'unif', 'unf'].includes(extension)) {
+            var core = 'nes';
+        } else if (['z64'].includes(extension)) {
+            var core = 'n64';
+        } else if (['smc', 'fig', 'sfc', 'gd3', 'gd7', 'dx2', 'bsx', 'swc'].includes(extension)) {
+            var core = 'snes';
+        } else if (['nds'].includes(extension)) {
+            var core = 'nds';
+        } else if (['gba'].includes(extension)) {
+            var core = 'gba';
+        } else if (['gb'].includes(extension)) {
+            var core = 'gb';
+        } else {
+            var core = prompt('Input core (examples: nes, snes, n64, gb, gba, psx)');
+        };
+        var a = document.createElement('div');
+        a.style = "max-width:100%";
+        a.style.width = window.innerWidth + "px";
+        a.style.height = window.innerHeight + "px";
+
+        var b = document.createElement('div');
+        b.id = 'game';
+        a.appendChild(b);
+        document.body.appendChild(a);
+        var script = document.createElement('script');
+        script.innerHTML = "EJS_player = '#game'; EJS_gameName = '" + gameName + "'; EJS_biosUrl = ''; EJS_gameUrl = '" + gameUrl + "'; EJS_core = '" + core + "'; EJS_pathtodata = 'data/'; ";
+        document.body.appendChild(script);
+        var script = document.createElement('script');
+        script.src = 'data/loader.js';
+        document.body.appendChild(script);
+      }
+    })
+    </script>
+
+    <h2 style="color: white;">Select Game Rom: </h1> <input type="file" id="file">
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+<script src="script.js?2"></script>
+</body>
