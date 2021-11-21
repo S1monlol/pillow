@@ -1,1 +1,2 @@
 tether! is game where you wreck as many enemies as possible using your tether, however if an enemy touches your ball then you get obliterated! This game has full mobile and offline support, designed as a progressive web application!
+Credit: https://github.com/RayhanADev/tether
