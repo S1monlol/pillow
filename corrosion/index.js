@@ -12,7 +12,7 @@ const ssl = {
 const server = https.createServer(ssl);
 const proxy = new Corrosion({
     codec: 'xor', // apply basic xor encryption to url parameters in an effort to evade filters. Optional.
-    prefix: '/notaproxy/', // specify the endpoint (prefix). Optional.
+    prefix: '/c/', // specify the endpoint (prefix). Optional.
     requestMiddleware: [
         Corrosion.middleware.blacklist([
             'accounts.google.com',
