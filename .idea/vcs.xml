@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/corrosion/CorrosionC" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/games/Emulatorjs/emulatorjs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/games/Tether/tether" vcs="Git" />
   </component>
