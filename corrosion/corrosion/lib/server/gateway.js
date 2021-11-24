@@ -12,7 +12,7 @@ function createGateway(ctx) {
                 clientResponse.writeHead(301, { Location: ctx.url.wrap(/https?:\/\//.test(url) ? url : 'http://' + url) });
                 clientResponse.end();
             } else {
-                clientResponse.writeHead(301, { Location: ctx.url.wrap('www.google.com/search?q=' + url) });
+                clientResponse.writeHead(301, { Location: ctx.url.wrap('https://www.google.com/search?q=' + url) });
                 clientResponse.end();
             };
         });
