@@ -2,7 +2,7 @@
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
-const Corrosion = require('./CorrosionC');
+const Corrosion = require('./corrosion');
 
 // you are free to use self-signed certificates here, if you plan to route through an SSL-providing reverse proxy.
 const ssl = {
