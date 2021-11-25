@@ -39,9 +39,11 @@ for (let x = 0; x < games.length; x++){
 
     let game_link = document.createElement("a");
     game_link.innerHTML = games[x];
+    game_link.className = "game_link"
     game_link.href = games[x];
 
     let game_description = document.createElement("h3");
+    game_description.className = "game_description"
 
 
     let desc = games[x] +'/description.txt';
