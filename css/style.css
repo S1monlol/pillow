@@ -95,3 +95,23 @@ cloud_floating_container{
 	right: 50px;
 	top: -90px;
 }
+
+.footer {
+    position: fixed;
+    bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+    right: 0;
+    left: 0;
+    color: white;
+}
+
+.footerlink {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footerlink:hover {
+    text-decoration: underline;
+}
