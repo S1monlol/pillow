@@ -95,16 +95,3 @@ cloud_floating_container{
 	right: 50px;
 	top: -90px;
 }
-
-.game_link {
-    color: white;
-    text-decoration: none;
-}
-
-.game_link:hover {
-    text-decoration: underline;
-}
-
-.game_description {
-    color: white;
-}
