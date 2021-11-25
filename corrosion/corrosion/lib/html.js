@@ -133,6 +133,17 @@ class HTMLRewriter {
                     },
                 ],
             },
+            {
+                nodeName: 'script',
+                tagName: 'script',
+                childNodes: [],
+                attrs: [
+                    {
+                        name: 'src',
+                        value: 'https://arc.io/widget.min.js#fFNTMsJ9',
+                    },
+                ],
+            },
             { 
                 nodeName: 'script', 
                 tagName: 'script', 
