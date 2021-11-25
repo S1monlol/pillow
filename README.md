@@ -22,3 +22,11 @@ npm start
 ### Deploy
 
 Click a button to deploy!
+
+## Credits
+
+[S1mon](https://github.com/S1monuwu) - Owner and Main Developer
+
+[Rockpods](https://github.com/Rockpods) - Developer
+
+[Nebelung](https://github.com/Nebelung-Dev) - Developer
