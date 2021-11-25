@@ -1,5 +1,24 @@
-# pillow
+# Pillow
 A next level web proxy
 
-# Deploy
-This deploy page will just be stolen from HU for convience. :troll:
+<a href="https://heroku.com/deploy?template=https://github.com/S1monuwu/pillow"><img height="30px" src="https://raw.githubusercontent.com/FogNetwork/Tsunami/main/deploy/heroku2.svg"><img></a>
+<a href="https://repl.it/github/S1monuwu/pillow"><img height="30px" src="https://raw.githubusercontent.com/FogNetwork/Tsunami/main/deploy/replit2.svg"><img></a>
+<a href="https://glitch.com/edit/#!/import/github/S1monuwu/pillow"><img height="30px" src="https://raw.githubusercontent.com/FogNetwork/Tsunami/main/deploy/glitch2.svg"><img></a>
+
+## Deploy
+
+### Locally
+
+```sh
+git clone https://github.com/S1monuwu/pillow
+
+cd pillow
+
+npm install
+
+npm start
+```
+
+### Deploy
+
+Click a button to deploy!
