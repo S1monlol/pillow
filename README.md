@@ -30,3 +30,5 @@ Click a button to deploy!
 [Rockpods](https://github.com/Rockpods) - Developer
 
 [Nebelung](https://github.com/Nebelung-Dev) - Developer
+
+[Degenerate](https://github.com/Degenerate0001) - Bug Maker / Fixer 
