@@ -136,6 +136,14 @@ if (localStorage.getItem("settings_cloud_speed") === null) {
   localStorage.setItem("settings_cloud_speed", 0.3)
 }
 
+var stealth = document.getElementById("stealth");
+stealth.oninput = function() {
+  console.log(this.checked);
+  localStorage.setItem("stealth", this.checked);
+}
+
+
+
 setInterval(function(){
 
   /* console.log((Number(cloud.style.left.slice(0, -2)) + ).toString() + 'px'); */

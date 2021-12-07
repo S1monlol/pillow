@@ -1,3 +1,18 @@
+if (localStorage.getItem("stealth") == "true"){
+
+  console.log("yup");
+  const search = document.getElementById('search');
+  search.removeAttribute("action");
+  search.removeAttribute("method");
+
+}
+
+
+
+
+
+/* Title stuff */
+
 var title = localStorage.getItem("title")
 var favicon = localStorage.getItem("favicon")
 
@@ -10,6 +25,7 @@ if (localStorage.hasOwnProperty("favicon")) {
 }
 
 
+/* Cloud Stuff */
 
 function setGameCloud(){
   let left = document.getElementById('games_cloud').style.left;
@@ -60,6 +76,9 @@ if (localStorage.getItem("games_cloud_speed") === null) {
 if (localStorage.getItem("settings_cloud_speed") === null) {
   localStorage.setItem("settings_cloud_speed", 0.3)
 }
+
+
+/* Cloud Movement stuff */
 
 setInterval(function(){
 
