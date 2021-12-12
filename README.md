@@ -1,3 +1,6 @@
+# RULE 1
+NO MAKING FUN OF THE FUCKING CODE
+
 # Pillow
 A next level web proxy
 
