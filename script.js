@@ -1,10 +1,42 @@
-if (localStorage.getItem("stealth") == "true"){
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
 
-  console.log("yup");
+const Snorlax = async () => {
+  await sleep(5000)
+  console.log('\n'.repeat('50'));
+  console.log(' ______ __ __ __                 \n' +
+    '|   __ \\__|  |  |.-----.--.--.--.\n' +
+    '|    __/  |  |  ||  _  |  |  |  |\n' +
+    '|___|  |__|__|__||_____|________|')
+  console.log('\n'.repeat('30'));
+}
+
+Snorlax()
+
+console.log(' ______ __ __ __                 \n' +
+    '|   __ \\__|  |  |.-----.--.--.--.\n' +
+    '|    __/  |  |  ||  _  |  |  |  |\n' +
+    '|___|  |__|__|__||_____|________|');
+
+
+function stealth() {
+  console.log('stealth')
+    const iframe = document.getElementById("stealth");
+    const main = document.querySelector('main') || {};
+    const input = document.getElementById("name");
+    iframe.style.display = "initial";
+    main.style.display = "none";
+    iframe.setAttribute("src", "/c/gateway?url=" + input.value);
+    return false;
+};
+
+
+if (localStorage.getItem("stealth") == "true"){
   const search = document.getElementById('search');
   search.removeAttribute("action");
   search.removeAttribute("method");
-
+  search.setAttribute("onsubmit", "stealth(); return false;");
 }
 
 

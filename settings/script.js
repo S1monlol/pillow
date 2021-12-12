@@ -1,3 +1,15 @@
+var stealth = localStorage.getItem("stealth")
+console.log(stealth.valueOf())
+
+if (stealth.valueOf().toString() == "true") { /* This wont work any other way dont bully me */
+  console.log('yup');
+  var stealth = document.getElementById("stealth");
+  stealth.checked = true;
+}
+
+
+
+
 var title = localStorage.getItem("title")
 var favicon = localStorage.getItem("favicon")
 
@@ -141,7 +153,6 @@ stealth.oninput = function() {
   console.log(this.checked);
   localStorage.setItem("stealth", this.checked);
 }
-
 
 
 setInterval(function(){
