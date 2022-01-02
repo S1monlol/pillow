@@ -2,6 +2,8 @@ const sleep = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
 
+
+
 const Snorlax = async () => {
   await sleep(5000)
   console.log('\n'.repeat('50'));
@@ -22,13 +24,19 @@ console.log(' ______ __ __ __                 \n' +
 
 function stealth() {
   console.log('stealth')
-    const iframe = document.getElementById("stealth");
-    const main = document.querySelector('main') || {};
-    const input = document.getElementById("name");
-    iframe.style.display = "initial";
-    main.style.display = "none";
-    iframe.setAttribute("src", "/c/gateway?url=" + input.value);
-    return false;
+  const iframe = document.getElementById("stealth");
+  const main = document.querySelector('main') || {};
+  const input = document.getElementById("name");
+  iframe.style.display = "initial";
+  main.style.display = "none";
+  console.log(input.value);
+  iframe.setAttribute("src", "https://w." + document.domain + "/main/" + input.value);
+  return false;
+};
+
+function corrosion() {
+  iframe.setAttribute("src", "/c/gateway?url=" + input.value);
+  return false;
 };
 
 
@@ -37,6 +45,20 @@ if (localStorage.getItem("stealth") == "true"){
   search.removeAttribute("action");
   search.removeAttribute("method");
   search.setAttribute("onsubmit", "stealth(); return false;");
+}
+
+if (localStorage.getItem("corrosion") == "true"){
+  const search = document.getElementById('search');
+  search.removeAttribute("action");
+  search.removeAttribute("method");
+  search.setAttribute("action", "/c/gateway");
+} else{
+
+  const search = document.getElementById('search');
+  search.removeAttribute("action");
+  search.removeAttribute("method");
+  search.setAttribute("onsubmit", "stealth(); return false;");
+
 }
 
 

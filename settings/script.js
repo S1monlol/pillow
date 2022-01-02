@@ -1,13 +1,29 @@
-var stealth = localStorage.getItem("stealth")
-console.log(stealth.valueOf())
 
-if (stealth.valueOf().toString() == "true") { /* This wont work any other way dont bully me */
+
+if (localStorage.hasOwnProperty("stealth")) {
+
+  var stealth = localStorage.getItem("stealth")
+  console.log(stealth.valueOf())
+  if (stealth.valueOf().toString() == "true") { /* This wont work any other way dont bully me */
   console.log('yup');
   var stealth = document.getElementById("stealth");
   stealth.checked = true;
+  }
+
 }
 
 
+if (localStorage.hasOwnProperty("stealth")) {
+
+  var stealth = localStorage.getItem("stealth")
+  console.log(stealth.valueOf())
+  if (stealth.valueOf().toString() == "true") { /* This wont work any other way dont bully me */
+  console.log('yup2');
+  var stealth = document.getElementById("stealth");
+  stealth.checked = true;
+  }
+
+}
 
 
 var title = localStorage.getItem("title")
@@ -152,6 +168,12 @@ var stealth = document.getElementById("stealth");
 stealth.oninput = function() {
   console.log(this.checked);
   localStorage.setItem("stealth", this.checked);
+}
+
+var corrosion = document.getElementById("corrosion");
+corrosion.oninput = function() {
+  console.log(this.checked);
+  localStorage.setItem("corrosion", this.checked);
 }
 
 
