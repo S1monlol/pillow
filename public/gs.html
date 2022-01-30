@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<link id ="pagestyle" rel="stylesheet" type="text/css" media="screen" href="css/style.css?v=1.3" />
+<link id ="pagestyle" rel="stylesheet" type="text/css" media="screen" href="css/games.css" />
 <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <head>
@@ -41,13 +41,13 @@ for (let x = 0; x < games.length; x++){
     let game_link = document.createElement("a");
     game_link.innerHTML = games[x];
     game_link.className = "game_link"
-    game_link.href = games[x];
+    game_link.href = '/games/' + games[x];
 
     let game_description = document.createElement("h3");
     game_description.className = "game_description"
 
 
-    let desc = games[x] +'/description.txt';
+    let desc = '/games/' + games[x] +'/description.txt';
 
 
     fetch(desc)
@@ -61,7 +61,7 @@ for (let x = 0; x < games.length; x++){
 
     let game_image = document.createElement("img")
 
-    game_image.src = games[x] + '/icon.png';
+    game_image.src = '/games/' + games[x] + '/icon.png';
     game_image.style.padding = '20px';
     game_image.style.length = '100px';
     game_image.style.width = '100px';
@@ -79,5 +79,5 @@ for (let x = 0; x < games.length; x++){
 <!-- test tag -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
-<script src="script.js?40"></script>
+<script src="js/games.js"></script>
 </body>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link id ="pagestyle" rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<head>
+    <script async src="https://arc.io/widget.min.js#fFNTMsJ9"></script>
+    <meta charset="UTF-8">
+    <title>Pillow</title>
+</head>
+<body scroll="no" id="body">
+<main>
+    <style>
+        @font-face {
+        font-family: 'candy_beansregular';
+        src: url('css/fonts/candy_beans-webfont.woff2') format('woff2'),
+             url('css/fonts/candy_beans-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+
+
+    </style>
+
+
+
+    <!-- Home Page -->
+
+
+    <a onclick="setSettingsCloud(); setGameCloud();" href="/gs"><img class="clouds" id="games_cloud" style="position: absolute; width: 200px; left: 400px; top: -30px"src="images/GamesCloud.png"></a>
+    <a onclick="setSettingsCloud(); setGameCloud();" href="/settings"> <img class="clouds" id="settings_cloud" style="position: absolute; width: 200px; left: 10px"src="images/SettingsCloud.png"></a>
+
+
+    <div style="text-align: center">
+      <img style="margin-right: 20px; margin-top: 190px;"src="images/pillow_icon.png">
+        <h1 style="font-size: 100px; font-family: candy_beansregular">Pillow</h1>
+    </div>
+
+    <form id="search" action="/c/gateway" method="POST">
+
+      <input type="text" name="url" class="form__input" id="name" placeholder=Search style="width: 700px" />
+
+    <div class="footer">Pillow 2021 - <a href="https://discord.gg/VVzUcGTj9V" class="footerlink">Discord</a></div>
+
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+    <script src="/js/main.js?47"></script>
+</main>
+<iframe id="stealth" src=""></iframe>
+</body>
+
+
