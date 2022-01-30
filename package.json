@@ -12,7 +12,7 @@
     "url": "git+https://github.com/S1monuwu/pillow.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/S1monuwu/pillow/issues"
   },
