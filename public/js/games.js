@@ -1,3 +1,30 @@
+// TODO : Add tags such as mobile combatibility
+
+// Go away dont read this shit code
+
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
+
+const Snorlax = async () => {
+  await sleep(5000)
+  console.log('\n'.repeat('50'));
+  console.log(' ______ __ __ __                 \n' +
+      '|   __ \\__|  |  |.-----.--.--.--.\n' +
+      '|    __/  |  |  ||  _  |  |  |  |\n' +
+      '|___|  |__|__|__||_____|________|')
+  console.log('\n'.repeat('30'));
+}
+
+Snorlax()
+
+console.log(' ______ __ __ __                 \n' +
+    '|   __ \\__|  |  |.-----.--.--.--.\n' +
+    '|    __/  |  |  ||  _  |  |  |  |\n' +
+    '|___|  |__|__|__||_____|________|');
+
+
+
 var title = localStorage.getItem("title")
 var favicon = localStorage.getItem("favicon")
 

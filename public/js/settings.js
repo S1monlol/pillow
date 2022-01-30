@@ -1,29 +1,23 @@
-
-
-if (localStorage.hasOwnProperty("stealth")) {
-
-  var stealth = localStorage.getItem("stealth")
-  console.log(stealth.valueOf())
-  if (stealth.valueOf().toString() == "true") { /* This wont work any other way dont bully me */
-  console.log('yup');
-  var stealth = document.getElementById("stealth");
-  stealth.checked = true;
-  }
-
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
 
-
-if (localStorage.hasOwnProperty("stealth")) {
-
-  var stealth = localStorage.getItem("stealth")
-  console.log(stealth.valueOf())
-  if (stealth.valueOf().toString() == "true") { /* This wont work any other way dont bully me */
-  console.log('yup2');
-  var stealth = document.getElementById("stealth");
-  stealth.checked = true;
-  }
-
+const Snorlax = async () => {
+  await sleep(5000)
+  console.log('\n'.repeat('50'));
+  console.log(' ______ __ __ __                 \n' +
+      '|   __ \\__|  |  |.-----.--.--.--.\n' +
+      '|    __/  |  |  ||  _  |  |  |  |\n' +
+      '|___|  |__|__|__||_____|________|')
+  console.log('\n'.repeat('30'));
 }
+
+Snorlax()
+
+console.log(' ______ __ __ __                 \n' +
+    '|   __ \\__|  |  |.-----.--.--.--.\n' +
+    '|    __/  |  |  ||  _  |  |  |  |\n' +
+    '|___|  |__|__|__||_____|________|');
 
 
 var title = localStorage.getItem("title")
@@ -164,16 +158,54 @@ if (localStorage.getItem("settings_cloud_speed") === null) {
   localStorage.setItem("settings_cloud_speed", 0.3)
 }
 
-var stealth = document.getElementById("stealth");
-stealth.oninput = function() {
-  console.log(this.checked);
-  localStorage.setItem("stealth", this.checked);
+
+let corrosion_check = true
+let corrosion_or_womginx = document.getElementById('corrosion_or_womginx')
+var corrosion = document.getElementById("corrosion");
+
+
+
+if(localStorage.getItem('corrosion') === 'true'){
+  console.log('Corrosion')
+
+  corrosion_or_womginx.textContent = 'Corrosion'
+  corrosion_check = true
+
+
+} else {
+  console.log('Womginx')
+
+  corrosion_or_womginx.textContent = 'Womginx'
+  corrosion_check = false
+
 }
 
-var corrosion = document.getElementById("corrosion");
+
 corrosion.oninput = function() {
   console.log(this.checked);
-  localStorage.setItem("corrosion", this.checked);
+  if(corrosion_check === true){
+    console.log('Womginx')
+
+    corrosion_or_womginx.textContent = 'Womginx'
+
+    localStorage.setItem("corrosion", false);
+    corrosion_check = false
+
+
+  } else {
+
+
+    console.log('Corrosion')
+
+    corrosion_or_womginx.textContent = 'Corrosion'
+
+    localStorage.setItem("corrosion", true);
+    corrosion_check = true
+
+  }
+
+  this.checked = false;
+
 }
 
 
