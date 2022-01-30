@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<link id ="pagestyle" rel="stylesheet" type="text/css" media="screen" href="css/games.css" />
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<head>
+    <script async src="https://arc.io/widget.min.js#fFNTMsJ9"></script>
+    <meta charset="UTF-8">
+    <title>Pillow | Games</title>
+</head>
+<body id="body">
+
+<a onclick="setSettingsCloud(); setHomeCloud()" href="/settings"> <img class="clouds" id="settings_cloud"style="position: absolute; width: 200px; left: 200px; top: -30px"src="images/SettingsCloud.png"></a>
+<a onclick="setSettingsCloud(); setHomeCloud()" href="/"><img class="clouds" id="home_cloud"style="position: absolute; width: 200px; left: 10px; top: -30px"src="images/HomeCloud.png"></a>
+
+
+<div style="margin-top: 200px" id="games"></div>
+
+<script>
+
+let games = ['Emulatorjs', 'Tether']
+
+for (let x = 0; x < games.length; x++){
+
+
+
+    let game = document.createElement("div");
+    game.id = games[x];
+
+
+
+    let game_content = document.createElement("div");
+    game_content.style.textAlign= 'center';
+    game_content.style.backgroundColor = '#32313D';
+    game_content.style.borderRadius = '6px';
+
+
+    let game_title = document.createElement("h2");
+
+
+    let game_link = document.createElement("a");
+    game_link.innerHTML = games[x];
+    game_link.className = "game_link"
+    game_link.href = '/games/' + games[x];
+
+    let game_description = document.createElement("h3");
+    game_description.className = "game_description"
+
+
+    let desc = '/games/' + games[x] +'/description.txt';
+
+
+    fetch(desc)
+        .then(response => response.text())
+        .then((data) => {
+            console.log(data);
+            game_description.innerHTML = data;
+
+
+        })
+
+    let game_image = document.createElement("img")
+
+    game_image.src = '/games/' + games[x] + '/icon.png';
+    game_image.style.padding = '20px';
+    game_image.style.length = '100px';
+    game_image.style.width = '100px';
+
+    game.appendChild(game_content);
+    game_content.append(game_image);
+    game_content.appendChild(game_title);
+    game_content.appendChild(game_description);
+    game_title.appendChild(game_link);
+    document.getElementById('games').appendChild(game);
+}
+
+</script>
+
+<!-- test tag -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+<script src="js/games.js"></script>
+</body>
