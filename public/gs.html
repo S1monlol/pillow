@@ -16,9 +16,12 @@
 
 <div style="margin-top: 200px" id="games"></div>
 
+<div class="grid-container" id="grid-container">
+</div>
+
 <script>
 
-let games = ['Emulatorjs', 'Tether']
+let games = ['Emulatorjs', 'Test', 'Tether', '2048', 'Minecraft']
 
 for (let x = 0; x < games.length; x++){
 
@@ -27,7 +30,7 @@ for (let x = 0; x < games.length; x++){
     let game = document.createElement("div");
     game.id = games[x];
 
-
+    game.className = 'grid-item';
 
     let game_content = document.createElement("div");
     game_content.style.textAlign= 'center';
@@ -39,6 +42,16 @@ for (let x = 0; x < games.length; x++){
 
 
     let game_link = document.createElement("a");
+
+    let mobile = document.createElement("h5")
+
+    let credit = document.createElement("a");
+    let credit_link = document.createElement("a");
+
+    credit_link.innerHTML = games[x];
+    credit_link.className = "credit_link"
+
+
     game_link.innerHTML = games[x];
     game_link.className = "game_link"
     game_link.href = '/games/' + games[x];
@@ -47,31 +60,74 @@ for (let x = 0; x < games.length; x++){
     game_description.className = "game_description"
 
 
-    let desc = '/games/' + games[x] +'/description.txt';
+    let desc = '/games/' + games[x] +'/yup.json';
 
 
     fetch(desc)
         .then(response => response.text())
         .then((data) => {
             console.log(data);
-            game_description.innerHTML = data;
+
+
+
+            data = JSON.parse(data)
+
+
+            credit.innerHTML = data.credit;
+            credit_link.innerHTML = games[x];
+            credit.href = data.credit;
+
+            if(data.mobile === 0) {
+
+                mobile.innerHTML = 'Chromebook';
+
+
+            } else if (data.mobile === 1) {
+
+                mobile.innerHTML = 'Mobile';
+
+            } else if (data.mobile === 2){
+
+                mobile.innerHTML = 'Mobile / Chromebook';
+
+            } else {
+
+                mobile.innerHTML = 'Samsung Smart Fridge';
+
+
+            }
+
+
+            game_description.innerHTML = data.description;
 
 
         })
 
+
     let game_image = document.createElement("img")
 
     game_image.src = '/games/' + games[x] + '/icon.png';
-    game_image.style.padding = '20px';
     game_image.style.length = '100px';
     game_image.style.width = '100px';
+
+    game_image.marginTop = '-30px';
+    game_image.marginBottom = '-100px';
+
+    mobile.style.marginTop = '-30px';
+    mobile.style.marginBottom = '-30px';
 
     game.appendChild(game_content);
     game_content.append(game_image);
     game_content.appendChild(game_title);
+    game_content.appendChild(mobile);
     game_content.appendChild(game_description);
+    game_content.appendChild(game_description);
+    game_content.appendChild(credit);
+
     game_title.appendChild(game_link);
-    document.getElementById('games').appendChild(game);
+    credit.appendChild(credit_link);
+
+    document.getElementById('grid-container').appendChild(game);
 }
 
 </script>
