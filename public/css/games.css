@@ -5,6 +5,23 @@ body{
 	Overflow-y:scroll;
 }
 
+
+/* Grid System */
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+
+	padding: 10px;
+}
+
+.grid-item {
+	width: 600px;
+	padding: 10px;
+	font-size: 30px;
+	text-align: center;
+}
+
+
 /* Clouds */
 
 .cloud {
