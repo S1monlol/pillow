@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link id ="pagestyle" rel="stylesheet" type="text/css" media="screen" href="css/settings.css" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+<head>
+    <script async src="https://arc.io/widget.min.js#fFNTMsJ9"></script>
+    <meta charset="UTF-8">
+    <title>Pillow | Settings</title>
+</head>
+<body id="body">
+
+<style>
+    @font-face {
+    font-family: 'candy_beansregular';
+    src: url('css/fonts/candy_beans-webfont.woff2') format('woff2'),
+         url('css/fonts/candy_beans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+</style>
+
+<!-- Settings Page !-->
+
+
+<a onclick="setGameCloud(); setHomeCloud();" href="/gs"> <img class="clouds" id="games_cloud" style="position: absolute; width: 200px; left: 400px; top: -30px"src="images/GamesCloud.png"></a>
+<a onclick="setHomeCloud(); setGameCloud();" href="/"><img class="clouds" id="home_cloud" style="position: absolute; width: 200px; left: 10px; top: -30px"src="images/HomeCloud.png"></a>
+
+<h1 style="margin-top: 190px; font-size: 100px; text-align: center; font-family: candy_beansregular; color: #8683bf;">Search Settings</h1>
+
+
+<!--
+
+<div style="text-align: center; background-color: #32313d;" class="parent">
+<h2 class="child inline-block-child" style="margin-top: 10px; font-size: 55px; font-family: candy_beansregular; color: #8683bf;" >Stealth (iFrame result)</h2>
+
+    <div class='child inline-block-child'>
+        <label style="bottom: 35px; left: 20px" class="switch">
+          <input id="stealth" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+    </div>
+
+</div>
+-->
+
+<div style="text-align: center; background-color: #32313d;" class="parent">
+<h2 id='corrosion_or_womginx'class="child inline-block-child" style="margin-top: 10px; font-size: 55px; font-family: candy_beansregular; color: #8683bf;" >Corrosion</h2>
+    <!-- Rounded switch -->
+    <div class='child inline-block-child'>
+        <label>
+          <input id="corrosion" style="height: 30px; width: 30px" type="checkbox">
+        </label>
+    </div>
+
+</div>
+
+
+<h1 style="margin-top: 190px; font-size: 100px; text-align: center; font-family: candy_beansregular; color: #8683bf;">Tab Cloaking</h1>
+<div style="background-color: #32313d" id="settabs">
+<div class="settab7" onclick="setreset()"><img width="70" height="70" class="setimg" title="Pillow" src="images/bigfav.ico"></div>
+<div class="settab3" onclick="setgoogle()"><img width="75" height="75"  class="setimg" title="Google" src="images/google2.png"></div>
+<div class="settab4" onclick="setgoogled()"><img width="75" height="75"  class="setimg" title="Google Drive" src="images/googledrive2.png"></div>
+<div class="settab6" onclick="setzoom()"><img width="75" height="75"  class="setimg" title="Zoom" src="images/zoom2.png"></div>
+</div>
+
+<h1 style="margin-top: 20px; font-size: 100px; text-align: center; font-family: candy_beansregular; color: #8683bf;">Cloud Speed</h1>
+
+
+
+<div style="background-color: #32313d; width: 100%; text-align: center" class="slidecontainer">
+    <h2 style="margin-top: 10px; font-size: 60px; text-align: center; font-family: candy_beansregular; color: #8683bf;" >Home Cloud</h2>
+  <input type="range" min="1" max="200" value="0" class="slider2" id="Home" style="width: 50%">
+
+  <h2 style="margin-top: 10px; font-size: 60px; text-align: center; font-family: candy_beansregular; color: #8683bf;" >Games Cloud</h2>
+
+  <input type="range" min="1" max="200" value="0" class="slider2" id="Games" style="width: 50%">
+
+
+<h2 style="margin-top: 10px; font-size: 60px; text-align: center; font-family: candy_beansregular; color: #8683bf;" >Settings Cloud</h2>
+
+  <input type="range" min="1" max="200" value="0" class="slider2" id="Settings" style="width: 50%">
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+<script src="js/settings.js"></script>
+</body>
+</html>
+
