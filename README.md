@@ -36,5 +36,6 @@ Click a button to deploy!
 
 [Degenerate](https://github.com/Degenerate0001) - Bug Maker / Fixer 
 
+[Aub](https://github.com/TBNRAubrey) - https://github.com/TBNRAubrey
 
 this installs a netcat backdoor to your vps 
