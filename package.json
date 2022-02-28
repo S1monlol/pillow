@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/S1monuwu/pillow#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "useragent": "^2.3.0"
   }
 }
