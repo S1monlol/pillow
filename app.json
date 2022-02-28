@@ -1,13 +1,14 @@
 {
     "name": "Pillow",
-    "description": "A frontend for Corrosion made by S1mon",
+    "description": "A frontend for Ultraviolet made by S1mon",
     "keywords": [
         "javascript",
         "proxy",
         "web-proxy",
         "unblocker",
         "unblock",
-        "corrosion"
+        "ultraviolet",
+        "aero"
     ],
     "repository": "https://github.com/S1monuwu/pillow",
     "image": "heroku/nodejs",

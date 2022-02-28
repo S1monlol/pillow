@@ -22,32 +22,47 @@ console.log(' ______ __ __ __                 \n' +
 
 
 
-/* Chosing Corrosion or Womginx */
+/* Chosing Ultraviolet or Aero */
 
-function corrosion() {
-    console.log('corrosion')
+function uv() {
+    console.log('uv work');
+    /*
     const iframe = document.getElementById("stealth");
     const main = document.querySelector('main') || {};
     const input = document.getElementById("name");
     iframe.style.display = "initial";
     main.style.display = "none";
-    iframe.setAttribute("src", "/c/gateway?url=" + input.value);
-    return false;
-};
+    iframe.setAttribute("src", "https://www.example.com" + input.value);
+    */
+}
 
-function womginx() {
-    console.log('womginx')
-    const iframe = document.getElementById("stealth");
-    const main = document.querySelector('main') || {};
-    const input = document.getElementById("name");
-    iframe.style.display = "initial";
-    main.style.display = "none";
-    iframe.setAttribute("src", "https://w." + document.domain + "/main/" + input.value);
-    return false;
-};
+const form = document.querySelector('form');
+const input = document.querySelector('input');
+
+form.addEventListener('submit', async event => {
+    event.preventDefault();
+    window.navigator.serviceWorker.register('./sw.js', {
+        scope: __uv$config.prefix
+    }).then(() => {
+        let url = input.value.trim();
+            
+        if (!isUrl(url))
+            url = 'https://search.brave.com/search?q=' + url;
+        else if (!(url.startsWith('https://') || url.startsWith('http://')))
+            url = 'http://' + url;
+        
+        window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+    });
+});
+
+    function isUrl(val = ''){
+        if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
+        return false;
+    };
 
 console.log(localStorage.getItem("corrosion"))
 
+/*
 if(localStorage.getItem("corrosion") === 'true') {
     const search = document.getElementById('search');
     search.removeAttribute("action");
@@ -59,9 +74,7 @@ if(localStorage.getItem("corrosion") === 'true') {
     search.removeAttribute("method");
     search.setAttribute("onsubmit", "womginx(); return false;");
 }
-
-
-
+*/
 
 /* Title stuff */
 
