@@ -1,2 +1,2 @@
 language = "bash"
-run = "git submodule update --init | npm i | npm start"
+run = "git submodule update --init && npm i && npm start"
